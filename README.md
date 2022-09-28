@@ -6,4 +6,4 @@ The project is a library that finds the overlap between two date ranges. The Dat
 * If `dateRange1` and `dateRange2` do not overlap, a `DateRangeDoesNotOverlap` exception is returned
   * If this is the case, the exception has a user-friendly message
 
-Your goal is to make the unit tests pass and for the behavior of Overlapper.FindOverlap to be correct according to the specification.
+Your goal is to make the unit tests pass and for the behavior of Overlapper.FindOverlap to be correct according to the specification. You _may_ need to correct bugs.
