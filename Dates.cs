@@ -2,11 +2,12 @@ using System;
 
 namespace csharp
 {
-    public class Overlapper
+    public static class DateRangeExtensions
     {
-        public DateRange FindOverlap(DateRange dateRange1, DateRange dateRange2)
+        public static DateRange FindOverlap(this DateRange dateRange1, DateRange dateRange2)
         {
             // TODO: Fill out this method
+            throw new NotImplementedException();
         }
     }
 
