@@ -11,7 +11,7 @@ Overlap Example:
 * `dateRange2`: 2022-02-01 to 2022-04-01
 * Overlap: 2022-02-01 to 2022-03-01
 
-You need to complete the definition of Overlapper by fill out the FindOverlap function such that it meets the following criteria:
+You need to complete the definition of DateRangeExtensions by filling out the FindOverlap function such that it meets the following criteria:
 * If `dateRange1` and `dateRange2` are equal, an equivalent `DateRange` is returned
 * If `dateRange1` and `dateRange2` overlap, a `DateRange` is returned that represents only the overlap
 * If `dateRange1` and `dateRange2` do not overlap, a `DateRangeDoesNotOverlapException` custom exception is returned
