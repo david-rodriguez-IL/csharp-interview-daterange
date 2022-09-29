@@ -16,4 +16,4 @@ You need to complete the definition of Overlapper by fill out the FindOverlap fu
 * If `dateRange1` and `dateRange2` overlap, a `DateRange` is returned that represents only the overlap
 * If `dateRange1` and `dateRange2` do not overlap, a `DateRangeDoesNotOverlapException` custom exception is returned
 
-Your goal is to make the unit tests pass and for the behavior of Overlapper.FindOverlap to be correct according to the specification.
+Your goal is to make the unit tests pass and for the behavior of Overlapper.FindOverlap to be correct according to the specification. You _may_ need to correct bugs.
