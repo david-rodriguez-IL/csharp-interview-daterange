@@ -32,23 +32,21 @@ namespace csharp
         }
 
         [TestMethod]
+        [ExpectedException(typeof(DateRangeDoesNotOverlapException))]
         public void TestRangeOneEndsWhenRangeTwoBegins()
         {
             var dateRange1 = new DateRange(SevenDaysAgo, Now);
             var dateRange2 = new DateRange(Now, FourteenDaysFuture);
-            var expected = new DateRange(Now, Now);
-            var actual = dateRange1.FindOverlap(dateRange2);
-            Assert.IsTrue(actual.Equals(expected));
+            dateRange1.FindOverlap(dateRange2);
         }
 
         [TestMethod]
+        [ExpectedException(typeof(DateRangeDoesNotOverlapException))]
         public void TestRangeTwoEndsWhenRangeOneBegins()
         {
             var dateRange2 = new DateRange(SevenDaysAgo, Now);
             var dateRange1 = new DateRange(Now, FourteenDaysFuture);
-            var expected = new DateRange(Now, Now);
-            var actual = dateRange1.FindOverlap(dateRange2);
-            Assert.IsTrue(actual.Equals(expected));
+            dateRange1.FindOverlap(dateRange2);
         }
 
         [TestMethod]
@@ -72,20 +70,20 @@ namespace csharp
         }
 
         [TestMethod]
-        [ExpectedException(typeof(DateRangeDoesNotOverlapException))]
+        [ExpectedException(typeof(Exception))]
         public void TestRangeOneDoesNotOverlapWithRangeTwo()
         {
             var dateRange1 = new DateRange(SevenDaysAgo, Now);
-            var dateRange2 = new DateRange(SevenDaysAgo, FourteenDaysFuture);
+            var dateRange2 = new DateRange(SevenDaysFuture, FourteenDaysFuture);
             dateRange1.FindOverlap(dateRange2);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(DateRangeDoesNotOverlapException))]
         public void TestRangeTwoDoesNotOverlapWithRangeOne()
         {
             var dateRange1 = new DateRange(SevenDaysAgo, Now);
-            var dateRange2 = new DateRange(SevenDaysFuture, FourteenDaysFuture);
+            var dateRange2 = new DateRange(SevenDaysAgo, FourteenDaysFuture);
             dateRange2.FindOverlap(dateRange1);
         }
 

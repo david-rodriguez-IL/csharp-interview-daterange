@@ -4,9 +4,9 @@ The project is a library that finds the overlap between two date ranges.
 
 The `DateRange` class has already been defined. A `DateRange` contains two `DateTime` objects; a Begin and End date. An `Equals` method has already been defined that returns true if the Begin and End dates match for both `DateRange` objects.
 
-The `DateRangeExtensions` class has been partially defined. The `FindOverlap` extension should take two `DateRange` and determine how they overlap. The "overlap" is the portion of both DateRanges that is identical. It is still considered overlapping even if it only overlaps by a single day (i.e. the End of one DateRange is the Begin of the other).
+The `DateRangeExtensions` class has been partially defined. The `FindOverlap` extension should take two `DateRange` and determine how they overlap. The "overlap" is the portion of both DateRanges that is identical.
 
-Overlap Example:
+Overlap Example (`YYYY-MM-DD` date format):
 * `dateRange1`: 2022-01-01 to 2022-03-01
 * `dateRange2`: 2022-02-01 to 2022-04-01
 * Overlap: 2022-02-01 to 2022-03-01
