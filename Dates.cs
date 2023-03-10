@@ -18,6 +18,8 @@ namespace csharp
 
         public DateRange(DateTime begin, DateTime end)
         {
+            if (begin > end)
+                throw new InvalidDateRangeException();
             Begin = begin;
             End = end;
         }
